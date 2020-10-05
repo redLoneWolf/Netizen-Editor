@@ -9,3 +9,6 @@
 - Crop
 - Rotate And Flip
 - Can use external fonts
+
+## Important
+This is an Unfinished Project
