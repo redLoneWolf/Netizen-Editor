@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fonts">
+        <item>abeezee</item>
+        <item>akronim</item>
+
+
+        <item>aclonica</item>
+        <item>aguafina_script</item>
+
+        <item>annie_use_your_telescope</item>
+
+    </string-array>
+
+
+
+</resources>

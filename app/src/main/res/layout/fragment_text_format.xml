@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:padding="10dp">
+
+    <com.sudhar.netizenEditor.ImageEditor.StrokeTextView
+        android:id="@+id/TextPreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/FormatLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Format"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/FormatSpinner"
+        app:layout_constraintTop_toBottomOf="@id/TextPreview" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/FormatSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintLeft_toRightOf="@id/FormatLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TextPreview" />
+
+    <TextView
+        android:id="@+id/TextAlignLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Alignment"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/FormatSpinner" />
+
+    <ImageButton
+        android:id="@+id/RightAlignBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_align_right"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/FontPreview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/CenterAlignBtn"
+        app:layout_constraintTop_toBottomOf="@id/FormatSpinner" />
+
+
+    <ImageButton
+        android:id="@+id/CenterAlignBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_align_center"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/FontPreview"
+        android:background="@color/colorPrimary"
+        app:layout_constraintLeft_toRightOf="@id/LeftAlignBtn"
+        app:layout_constraintTop_toBottomOf="@id/FormatSpinner"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/LeftAlignBtn"
+        android:layout_width="33dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_align_left"
+        app:layout_constraintBottom_toTopOf="@id/FontPreview"
+        app:layout_constraintEnd_toEndOf="@+id/TextAlignLabel"
+        android:background="@color/colorPrimary"
+        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintLeft_toRightOf="@id/TextAlignLabel"
+        app:layout_constraintStart_toStartOf="@+id/TextAlignLabel"
+        app:layout_constraintTop_toBottomOf="@id/FormatSpinner" />
+
+    <TextView
+        android:id="@+id/FontLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Font"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/FontPreview"
+
+        app:layout_constraintTop_toBottomOf="@id/LeftAlignBtn" />
+
+    <TextView
+        android:id="@+id/FontPreview"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="ABC abc"
+        android:textAlignment="center"
+
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/FontLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LeftAlignBtn" />
+
+
+    <TextView
+        android:id="@+id/TextColorLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Text Color"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/TextColorbtn"
+        app:layout_constraintTop_toBottomOf="@id/FontPreview" />
+
+    <TextView
+        android:id="@+id/TextColorbtn"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="Open Color Picker"
+
+        app:layout_constraintLeft_toRightOf="@id/TextColorLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/FontPreview" />
+
+
+    <TextView
+        android:id="@+id/BgColorLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Background"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/BgColorbtn"
+        app:layout_constraintTop_toBottomOf="@id/TextColorbtn" />
+
+    <TextView
+        android:id="@+id/BgColorbtn"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="Open Color Picker"
+
+        app:layout_constraintLeft_toRightOf="@id/BgColorLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TextColorbtn" />
+
+
+    <TextView
+        android:id="@+id/StrokeColorLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Stroke Color"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/BgColorbtn"
+        app:layout_constraintTop_toBottomOf="@id/BgColorbtn" />
+
+    <TextView
+        android:id="@+id/StrokeColorbtn"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:gravity="center"
+        android:text="Open Color Picker"
+
+        app:layout_constraintLeft_toRightOf="@id/StrokeColorLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/BgColorbtn" />
+
+
+    <TextView
+        android:id="@+id/StrokeWidthLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Stroke Width"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/StrokeWidthSeekbar"
+        app:layout_constraintTop_toBottomOf="@id/StrokeColorbtn" />
+
+
+    <SeekBar
+        android:id="@+id/StrokeWidthSeekbar"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:max="5"
+        android:min="1"
+        android:progress="1"
+        app:layout_constraintLeft_toRightOf="@id/StrokeWidthLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/StrokeColorbtn" />
+
+    <Button
+        android:id="@+id/FormatCancelBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/FormatDoneBtn"
+        app:layout_constraintTop_toBottomOf="@id/StrokeWidthLabel" />
+
+
+    <Button
+        android:id="@+id/FormatDoneBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/FormatCancelBtn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/StrokeWidthLabel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
